@@ -2,9 +2,7 @@
 
 var _ = require('lodash');
 
-var style = {};
-
-style = {
+var style = {
     class: {
         template: '## {{name}} {{paramsSummary}}  \n{{description}}\n\n{{params}}',
         params: {
@@ -17,15 +15,13 @@ style = {
         }
     }
 };
-
 style.function = style.class;
 
-module.exports = {
-    style: style,
-    extend: function (comment) {
-        if (['function', 'class'].indexOf(comment.kind) == -1) return;
-        comment.paramsSummary = comment.params.map(function (param) {
-            return param.name + ':' + param.type.names[0];
-        });
-    }
+var extend = function (comment) {
+    if (['function', 'class'].indexOf(comment.kind) == -1) return;
+    comment.paramsSummary = comment.params.map(function (param) {
+        return param.name + ':' + param.type.names[0];
+    });
 }
+
+module.exports = {style, extend}
