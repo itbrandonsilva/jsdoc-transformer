@@ -1,13 +1,12 @@
 {
-  "name": "jsdoc-to-md",
-  "version": "1.0.0",
+  "name": "jsdoc-transformer",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Brandon Silva",
   "dependencies": {
     "jsdoc": "^3.4.0",
     "lodash": "^3.10.1",
